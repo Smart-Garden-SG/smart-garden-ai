@@ -77,7 +77,7 @@ def predict_fertilizer_model(input_data: pd.DataFrame):
     return prediction
 
 async def get_weather_data(lat: float, lon: float, api_key: str) -> Dict[str, float]:
-    url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=6d2a222c0a4cb9354b52687ceb0ddf1f&units=metric"
+    url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=**&units=metric"
     
     async with httpx.AsyncClient() as client:
         response = await client.get(url)
